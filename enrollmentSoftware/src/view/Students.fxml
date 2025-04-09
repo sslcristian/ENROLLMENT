@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controller.StudentsController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Students' Module" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
