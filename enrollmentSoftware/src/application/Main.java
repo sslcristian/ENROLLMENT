@@ -20,6 +20,10 @@ public class Main extends Application {
 			rootLayout = loader.load();
 
 			Scene scene = new Scene(rootLayout);
+
+	
+			scene.getStylesheets().add(getClass().getResource("/view/style.css").toExternalForm());
+
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Enrollment Software");
 			primaryStage.show();
@@ -27,6 +31,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
+
 
 	
 	public static void loadView(String fxmlFile) {
