@@ -1,16 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentsController">
+    <padding>
+        <Insets bottom="40" left="40" right="40" top="40" />
+    </padding>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controller.StudentsController">
-   <center>
-      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="400.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Students' Module" />
-         </children>
-      </VBox>
-   </center>
-</BorderPane>
+    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Gestionar Estudiantes">
+        <font>
+            <Font name="Arial" size="24" />
+        </font>
+        <effect>
+            <DropShadow color="#95a5a6" radius="3" />
+        </effect>
+    </Label>
+
+    <TextField fx:id="idField" prefWidth="300" promptText="ID del Estudiante" />
+    <TextField fx:id="nameField" prefWidth="300" promptText="Nombre del Estudiante" />
+    <TextField fx:id="emailField" prefWidth="300" promptText="Correo Electrónico" />
+
+    <TableView fx:id="studentTable" prefHeight="200.0" prefWidth="500.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="150.0" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
+            <TableColumn fx:id="emailColumn" prefWidth="200.0" text="Email" />
+        </columns>
+    </TableView>
+
+    <Button fx:id="btnAdd" onAction="#addStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5;" text="Agregar Estudiante">
+        <effect>
+            <DropShadow color="#2980b9" radius="3" />
+        </effect>
+    </Button>
+
+    <Button fx:id="btnUpdate" onAction="#updateStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 5;" text="Actualizar Estudiante">
+        <effect>
+            <DropShadow color="#e67e22" radius="3" />
+        </effect>
+    </Button>
+
+    <Button fx:id="btnDelete" onAction="#deleteStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 5;" text="Eliminar Estudiante">
+        <effect>
+            <DropShadow color="#c0392b" radius="3" />
+        </effect>
+    </Button>
+
+    <Button fx:id="btnFetch" onAction="#fetchStudents" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="Mostrar Todos los Estudiantes">
+        <effect>
+            <DropShadow color="#27ae60" radius="3" />
+        </effect>
+    </Button>
+
+   
+    <Button fx:id="btnBackToMenu" onAction="#goBackToMenu" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 5;" text="Volver al Menú">
+        <effect>
+            <DropShadow color="#5d6d7e" radius="3" />
+        </effect>
+    </Button>
+</VBox>
