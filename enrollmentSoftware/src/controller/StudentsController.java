@@ -11,7 +11,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import model.FXUtils;
 import model.Student;
+import javafx.scene.input.KeyCode;
 
 public class StudentsController {
 
@@ -50,6 +52,24 @@ public class StudentsController {
                 idField.setDisable(true);
             }
         });
+     
+        studentTable.setRowFactory(tv -> {
+            TableRow<Student> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (!row.isEmpty() && event.getClickCount() == 2) {
+                    FXUtils.clearSelectionAndFieldsS(studentTable, idField, nameField, emailField);  
+                }
+            });
+            return row;
+        });
+
+      
+        studentTable.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ESCAPE) {
+                FXUtils.clearSelectionAndFieldsS(studentTable, idField, nameField, emailField);  
+            }
+        });
+        
     }
 
     @FXML

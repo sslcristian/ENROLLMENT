@@ -1,6 +1,7 @@
 package controller;
 
 import application.Main;
+import javafx.scene.input.KeyCode;
 import data.DBConnection;
 import data.EnrollmentDAO;
 import javafx.collections.FXCollections;
@@ -11,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Course;
 import model.Enrollment;
+import model.FXUtils;
 import model.Student;
 
 import java.sql.Connection;
@@ -70,6 +72,22 @@ public class EnrollmentsController {
                 enrollmentDatePicker.setValue(newSel.getEnrollmentDate());
                 studentIdField.setDisable(true);
                 courseCodeField.setDisable(true);
+            }
+        });
+        
+        enrollmentTable.setRowFactory(tv -> {
+            TableRow<Enrollment> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (!row.isEmpty() && event.getClickCount() == 2) {
+                    FXUtils.clearSelectionAndFieldsE(enrollmentTable, studentIdField, courseCodeField, enrollmentDatePicker);
+                }
+            });
+            return row;
+        });
+       
+        enrollmentTable.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ESCAPE) {
+                FXUtils.clearSelectionAndFieldsE(enrollmentTable, studentIdField, courseCodeField, enrollmentDatePicker);
             }
         });
     }

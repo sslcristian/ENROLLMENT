@@ -10,7 +10,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Course;
-
+import model.FXUtils;
+import javafx.scene.input.KeyCode;
 import java.sql.Connection;
 
 public class CoursesController {
@@ -48,6 +49,23 @@ public class CoursesController {
                 nameField.setText(newSel.getName());
                 creditsField.setText(String.valueOf(newSel.getCredits()));
                 codeField.setDisable(true);
+            }
+        });
+      
+        courseTable.setRowFactory(tv -> {
+            TableRow<Course> row = new TableRow<>();
+            row.setOnMouseClicked(event -> {
+                if (!row.isEmpty() && event.getClickCount() == 2) {
+                    FXUtils.clearSelectionAndFieldsC(courseTable, codeField, nameField, creditsField); 
+                }
+            });
+            return row;
+        });
+
+       
+        courseTable.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ESCAPE) {
+                FXUtils.clearSelectionAndFieldsC(courseTable, codeField, nameField, creditsField);  
             }
         });
     }
