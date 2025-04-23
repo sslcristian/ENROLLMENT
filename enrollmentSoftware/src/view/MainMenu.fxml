@@ -7,33 +7,33 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="root" alignment="CENTER" spacing="20" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+<VBox fx:id="root" alignment="CENTER" spacing="20" style="-fx-background-color: #E3F2FD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
     <padding>
         <Insets bottom="50" left="50" right="50" top="50" />
     </padding>
-    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Menu de Acceso">
+    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #0D47A1;" text="Menu de Acceso">
         <font>
             <Font name="Arial" size="24" />
         </font>
         <effect>
-            <DropShadow color="#95a5a6" radius="3" />
+            <DropShadow color="#90CAF9" radius="3" />
         </effect>
     </Label>
-    <Button fx:id="btnStudent" onAction="#goToStudent" prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5;" text="ESTUDIANTES">
+    <Button fx:id="btnStudent" onAction="#goToStudent" prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #90CAF9; -fx-text-fill: white; -fx-background-radius: 5;" text="ESTUDIANTES">
         <font>
             <Font size="18" />
         </font>
         <effect>
-            <DropShadow color="#2980b9" radius="3" />
+            <DropShadow color="#64B5F6" radius="3" />
         </effect>
     </Button>
-   <Button fx:id="btnCourse" mnemonicParsing="false" onAction="#goToCourse" prefHeight="50.0" prefWidth="200.0" style="-fx-font-size: 16; -fx-text-fill: white; -fx-background-radius: 5; -fx-background-color: #33ffce;" text="CURSOS" textFill="#287260" />
-    <Button fx:id="btnEnrollment" onAction="#goToEnrollment" prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="INCRIPCIONES">
+    <Button fx:id="btnCourse" mnemonicParsing="false" onAction="#goToCourse" prefHeight="50.0" prefWidth="200.0" style="-fx-font-size: 16; -fx-text-fill: white; -fx-background-radius: 5; -fx-background-color: #BBDEFB;" text="CURSOS" textFill="#0D47A1" />
+    <Button fx:id="btnEnrollment" onAction="#goToEnrollment" prefHeight="50" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #64B5F6; -fx-text-fill: white; -fx-background-radius: 5;" text="INSCRIPCIONES">
         <font>
             <Font size="18" />
         </font>
         <effect>
-            <DropShadow color="#27ae60" radius="3" />
+            <DropShadow color="#42A5F5" radius="3" />
         </effect>
     </Button>
 </VBox>

@@ -12,12 +12,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnrollmentsController">
+<VBox styleClass="root" alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnrollmentsController">
     <padding>
         <Insets bottom="40" left="40" right="40" top="40" />
     </padding>
 
-    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Gestión de Inscripciones">
+    <Label styleClass="header-label" text="Gestión de Inscripciones">
         <font>
             <Font name="Arial" size="24" />
         </font>
@@ -30,7 +30,7 @@
     <TextField fx:id="courseCodeField" prefWidth="300" promptText="Código Curso" />
     <DatePicker fx:id="enrollmentDatePicker" prefWidth="300" promptText="Fecha Inscripción" />
 
-       <TableView fx:id="enrollmentTable" prefHeight="300.0" prefWidth="500.0">
+    <TableView fx:id="enrollmentTable" prefHeight="300.0" prefWidth="500.0">
         <columns>
             <TableColumn fx:id="studentIdColumn" prefWidth="150.0" text="ID Estudiante" />
             <TableColumn fx:id="courseCodeColumn" prefWidth="150.0" text="Código Curso" />
@@ -39,52 +39,21 @@
     </TableView>
 
     <HBox alignment="CENTER" spacing="10">
-        <Button fx:id="btnAdd" onAction="#addEnrollment" prefHeight="40" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5;" text="Agregar Inscripción">
-            <effect>
-                <DropShadow color="#2980b9" radius="3" />
-            </effect>
-        </Button>
-        
-        <Button fx:id="btnUpdate" onAction="#updateEnrollment" prefHeight="40" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 5;" text="Actualizar Inscripción">
-            <effect>
-                <DropShadow color="#e67e22" radius="3" />
-            </effect>
-        </Button>
+        <Button fx:id="btnAdd" onAction="#addEnrollment" prefHeight="40" prefWidth="200" styleClass="button" text="Agregar Inscripción" />
+        <Button fx:id="btnUpdate" onAction="#updateEnrollment" prefHeight="40" prefWidth="200" styleClass="button" text="Actualizar Inscripción" />
     </HBox>
 
     <HBox alignment="CENTER" spacing="10">
-        <Button fx:id="btnDelete" onAction="#deleteEnrollment" prefHeight="40" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 5;" text="Eliminar Inscripción">
-            <effect>
-                <DropShadow color="#c0392b" radius="3" />
-            </effect>
-        </Button>
-
-        <Button fx:id="btnFetch" onAction="#fetchEnrollments" prefHeight="40" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="Mostrar Inscripciones">
-            <effect>
-                <DropShadow color="#27ae60" radius="3" />
-            </effect>
-        </Button>
+        <Button fx:id="btnDelete" onAction="#deleteEnrollment" prefHeight="40" prefWidth="200" styleClass="button" text="Eliminar Inscripción" />
+        <Button fx:id="btnFetch" onAction="#fetchEnrollments" prefHeight="40" prefWidth="200" styleClass="button" text="Mostrar Inscripciones" />
     </HBox>
 
     <HBox alignment="CENTER" spacing="10">
-        <Button fx:id="btnCoursesByStudent" onAction="#showCoursesByStudent" prefHeight="40" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5;" text="Cursos por Estudiante">
-            <effect>
-                <DropShadow color="#2980b9" radius="3" />
-            </effect>
-        </Button>
-
-        <Button fx:id="btnStudentsByCourse" onAction="#showStudentsByCourse" prefHeight="40" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 5;" text="Estudiantes por Curso">
-            <effect>
-                <DropShadow color="#e67e22" radius="3" />
-            </effect>
-        </Button>
+        <Button fx:id="btnCoursesByStudent" onAction="#showCoursesByStudent" prefHeight="40" prefWidth="200" styleClass="button" text="Cursos por Estudiante" />
+        <Button fx:id="btnStudentsByCourse" onAction="#showStudentsByCourse" prefHeight="40" prefWidth="200" styleClass="button" text="Estudiantes por Curso" />
     </HBox>
 
     <HBox alignment="CENTER" spacing="10">
-        <Button fx:id="btnBackToMenu" onAction="#goBackToMenu" prefHeight="40" prefWidth="200" style="-fx-font-size: 16; -fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 5;" text="Volver al Menú">
-            <effect>
-                <DropShadow color="#5d6d7e" radius="3" />
-            </effect>
-        </Button>
+        <Button fx:id="btnBackToMenu" onAction="#goBackToMenu" prefHeight="40" prefWidth="200" styleClass="button" text="Volver al Menú" />
     </HBox>
 </VBox>

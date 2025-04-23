@@ -10,17 +10,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentsController">
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #E3F2FD;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentsController">
     <padding>
         <Insets bottom="40" left="40" right="40" top="40" />
     </padding>
 
-    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Gestionar Estudiantes">
+    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #0D47A1;" text="Gestionar Estudiantes">
         <font>
             <Font name="Arial" size="24" />
         </font>
         <effect>
-            <DropShadow color="#95a5a6" radius="3" />
+            <DropShadow color="#90CAF9" radius="3" />
         </effect>
     </Label>
 
@@ -36,31 +36,30 @@
         </columns>
     </TableView>
 
-    <Button fx:id="btnAdd" onAction="#addStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #3498db; -fx-text-fill: white; -fx-background-radius: 5;" text="Agregar Estudiante">
+    <Button fx:id="btnAdd" onAction="#addStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #90CAF9; -fx-text-fill: white; -fx-background-radius: 5;" text="Agregar Estudiante">
         <effect>
-            <DropShadow color="#2980b9" radius="3" />
+            <DropShadow color="#64B5F6" radius="3" />
         </effect>
     </Button>
 
-    <Button fx:id="btnUpdate" onAction="#updateStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 5;" text="Actualizar Estudiante">
+    <Button fx:id="btnUpdate" onAction="#updateStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #BBDEFB; -fx-text-fill: white; -fx-background-radius: 5;" text="Actualizar Estudiante">
         <effect>
-            <DropShadow color="#e67e22" radius="3" />
+            <DropShadow color="#90CAF9" radius="3" />
         </effect>
     </Button>
 
-    <Button fx:id="btnDelete" onAction="#deleteStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-background-radius: 5;" text="Eliminar Estudiante">
+    <Button fx:id="btnDelete" onAction="#deleteStudent" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #64B5F6; -fx-text-fill: white; -fx-background-radius: 5;" text="Eliminar Estudiante">
         <effect>
-            <DropShadow color="#c0392b" radius="3" />
+            <DropShadow color="#42A5F5" radius="3" />
         </effect>
     </Button>
 
-    <Button fx:id="btnFetch" onAction="#fetchStudents" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #2ecc71; -fx-text-fill: white; -fx-background-radius: 5;" text="Mostrar Todos los Estudiantes">
+    <Button fx:id="btnFetch" onAction="#fetchStudents" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #42A5F5; -fx-text-fill: white; -fx-background-radius: 5;" text="Mostrar Todos los Estudiantes">
         <effect>
-            <DropShadow color="#27ae60" radius="3" />
+            <DropShadow color="#64B5F6" radius="3" />
         </effect>
     </Button>
 
-   
     <Button fx:id="btnBackToMenu" onAction="#goBackToMenu" prefHeight="40" prefWidth="300" style="-fx-font-size: 16; -fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 5;" text="Volver al Menú">
         <effect>
             <DropShadow color="#5d6d7e" radius="3" />
