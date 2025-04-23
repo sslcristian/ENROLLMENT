@@ -20,19 +20,31 @@ public class MainMenuController {
     @FXML
     private VBox root;
 
-    @FXML
-    void goToCourse(ActionEvent event) {
-    	Main.loadScene("/view/Courses.fxml");
+   
+    private void loadScene(String scenePath) {
+        try {
+            Main.loadScene(scenePath); 
+        } catch (Exception e) {
+            System.out.println("Error al cargar la escena: " + scenePath);
+            e.printStackTrace();  
+        }
     }
 
-    @FXML
-    void goToEnrollment(ActionEvent event) {
-    	Main.loadScene("/view/Enrollments.fxml");
-    }
-
+   
     @FXML
     void goToStudent(ActionEvent event) {
-    	Main.loadScene("/view/Students.fxml");
+        loadScene("/view/Students.fxml");  
     }
 
+   
+    @FXML
+    void goToCourse(ActionEvent event) {
+        loadScene("/view/Courses.fxml");  
+    }
+
+    
+    @FXML
+    void goToEnrollment(ActionEvent event) {
+        loadScene("/view/Enrollments.fxml");  
+    }
 }

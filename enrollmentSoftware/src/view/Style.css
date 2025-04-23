@@ -1,23 +1,22 @@
-/* Root background */
+
 .root {
-    -fx-background-color: linear-gradient(to bottom, #E3F2FD, #BBDEFB); /* Azul muy claro y suave */
+    -fx-background-color: linear-gradient(to bottom, #E3F2FD, #BBDEFB); 
     -fx-font-family: "Arial";
     -fx-font-size: 14px;
     -fx-padding: 20px;
     -fx-alignment: center;
 }
 
-/* Styling for labels */
 .header-label {
     -fx-font-size: 24px;
     -fx-font-weight: bold;
-    -fx-text-fill: #0D47A1; /* Azul más oscuro para texto de encabezados */
+    -fx-text-fill: #0D47A1; 
     -fx-padding: 10px;
 }
 
-/* Button styles */
+
 .button {
-    -fx-background-color: linear-gradient(to bottom, #90CAF9, #64B5F6); /* Azul suave para los botones */
+    -fx-background-color: linear-gradient(to bottom, #90CAF9, #64B5F6); 
     -fx-text-fill: white;
     -fx-padding: 12px;
     -fx-pref-width: 150px;
@@ -30,18 +29,18 @@
     -fx-transition: all 0.3s ease-in-out;
 }
 
-/* Button hover effect */
+
 .button:hover {
-    -fx-background-color: #64B5F6; /* Azul más oscuro para hover */
+    -fx-background-color: #64B5F6; 
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
     -fx-transition: all 0.3s ease-in-out;
 }
 
-/* Styling for input fields */
+
 .text-field, .password-field, .text-area {
     -fx-background-color: white;
-    -fx-border-color: #BBDEFB; /* Azul suave para los bordes */
+    -fx-border-color: #BBDEFB;
     -fx-border-radius: 6;
     -fx-background-radius: 6;
     -fx-padding: 12px;
@@ -52,8 +51,16 @@
     -fx-pref-height: 50px;
 }
 
-/* Input fields hover effect */
+
 .text-field:hover, .password-field:hover, .text-area:hover {
-    -fx-border-color: #90CAF9; /* Azul suave al pasar el ratón por encima */
+    -fx-border-color: #90CAF9; 
+}
+.sidebar-button {
+    -fx-background-color: #1976D2;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
 }
 
