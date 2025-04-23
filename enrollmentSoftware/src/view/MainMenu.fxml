@@ -27,7 +27,7 @@
     
     <center>
         <StackPane fx:id="contentPane" style="-fx-background-color: #E3F2FD;">
-            <Label style="-fx-font-size: 24; -fx-text-fill: #0D47A1;" text="Bienvenido al sistema" />
+            <Label style="-fx-font-size: 24; -fx-text-fill: #0D47A1;" text="Bienvenido al sistema🔥" />
         </StackPane>
     </center>
 
